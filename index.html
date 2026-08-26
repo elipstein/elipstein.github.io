@@ -1,146 +1,921 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eli Lipstein - Professional Profile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דין טאי פונג — תפריט בעברית</title>
+<meta name="description" content="התפריט המלא של דין טאי פונג בעברית, עם השמות באנגלית להזמנה.">
+<meta name="theme-color" content="#12100F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="דין טאי פונג — תפריט בעברית">
+<meta property="og:description" content="התפריט המלא בעברית, עם השמות באנגלית להזמנה.">
+<meta property="og:locale" content="he_IL">
+<meta name="apple-mobile-web-app-title" content="תפריט DTF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;600&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12100F;
+    --ink-2:#1A1716;
+    --paper:#EDE6D9;
+    --muted:#948A7E;
+    --red:#C8372D;
+    --gold:#C9A227;
+    --line:rgba(237,230,217,.12);
+  }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+  *{box-sizing:border-box;margin:0;padding:0}
 
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 100%;
-            padding: 50px 40px;
-            text-align: center;
-        }
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Assistant',system-ui,sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
 
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 30px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-            border: 4px solid white;
-        }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px 96px}
 
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 20%;
-        }
+  /* ---------- masthead ---------- */
+  header{
+    padding:72px 0 40px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:13px;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--gold);direction:ltr;
+  }
+  h1{
+    font-family:'Frank Ruhl Libre',serif;
+    font-weight:900;
+    font-size:clamp(44px,9vw,86px);
+    line-height:1;
+    margin:18px 0 6px;
+  }
+  .latin-title{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:clamp(15px,2.4vw,20px);
+    letter-spacing:.42em;text-transform:uppercase;
+    color:var(--muted);direction:ltr;
+  }
+  .lede{
+    max-width:52ch;margin:26px auto 0;
+    color:var(--muted);font-size:16px;
+  }
 
-        h1 {
-            font-size: 2.5rem;
-            color: #2d3748;
-            margin-bottom: 10px;
-        }
+  /* ---------- the pleat motif: 18 folds ---------- */
+  .pleats{display:flex;justify-content:center;gap:5px;margin:34px 0 0}
+  .pleats i{
+    width:2px;height:16px;background:var(--gold);opacity:.5;
+    display:block;border-radius:1px;
+    transform-origin:bottom center;
+  }
+  .pleats i:nth-child(odd){height:22px;opacity:.85}
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: #667eea;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:rgba(18,16,15,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    margin-bottom:8px;
+  }
+  .nav-inner{
+    max-width:1080px;margin:0 auto;padding:12px 24px;
+    display:flex;gap:22px;overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .nav-inner::-webkit-scrollbar{display:none}
+  nav a{
+    color:var(--muted);text-decoration:none;white-space:nowrap;
+    font-size:15px;padding:4px 0;border-bottom:1px solid transparent;
+  }
+  nav a:hover,nav a:focus-visible{color:var(--paper);border-bottom-color:var(--red)}
 
-        .bio {
-            color: #4a5568;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            line-height: 1.8;
-        }
+  /* ---------- sections ---------- */
+  section{padding:64px 0 8px;scroll-margin-top:64px}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px}
+  .sec-head h2{
+    font-family:'Frank Ruhl Libre',serif;
+    font-weight:700;font-size:clamp(28px,4.4vw,40px);line-height:1.1;
+  }
+  .sec-head .en{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:14px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--gold);direction:ltr;white-space:nowrap;
+  }
+  .sec-head .rule{flex:1;height:1px;background:var(--line)}
 
-        .linkedin-button {
-            display: inline-block;
-            background: #0077b5;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
-        }
+  /* ---------- dish grid ---------- */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
+  .dish{
+    background:var(--ink-2);
+    padding:26px 26px 22px;
+    display:flex;flex-direction:column;gap:10px;
+    transition:background .2s ease;
+  }
+  .dish:hover{background:#211D1B}
 
-        .linkedin-button:hover {
-            background: #005582;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
-        }
+  .dish h3{
+    font-family:'Frank Ruhl Libre',serif;
+    font-weight:500;font-size:22px;line-height:1.25;
+  }
+  .dish h3 a{color:var(--paper);text-decoration:none;border-bottom:1px solid transparent}
+  .dish h3 a:hover,.dish h3 a:focus-visible{border-bottom-color:var(--gold)}
 
-        .linkedin-button::before {
-            content: "in";
-            display: inline-block;
-            background: white;
-            color: #0077b5;
-            width: 24px;
-            height: 24px;
-            border-radius: 3px;
-            margin-right: 10px;
-            font-weight: bold;
-            line-height: 24px;
-            font-size: 16px;
-        }
+  /* signature element: the point-to-order strip */
+  .order{
+    direction:ltr;text-align:left;
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:500;font-size:19px;letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--paper);
+    border-right:2px solid var(--red);
+    padding:2px 0 2px 0;padding-right:10px;
+    align-self:flex-start;
+  }
+  .desc{font-size:15px;color:#C3B9AC}
+  .note{font-size:13px;color:var(--muted)}
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 30px;
-            }
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+  .tag{
+    font-size:12px;letter-spacing:.02em;
+    padding:2px 9px;border:1px solid var(--line);border-radius:999px;
+    color:var(--muted);
+  }
+  .tag.pork{color:#D9968E;border-color:rgba(200,55,45,.4)}
+  .tag.sea{color:#8FB3C4;border-color:rgba(143,179,196,.32)}
+  .tag.veg{color:#9DBE8C;border-color:rgba(157,190,140,.34)}
+  .tag.hot{color:#E0A05A;border-color:rgba(224,160,90,.36)}
+  .tag.star{color:var(--gold);border-color:rgba(201,162,39,.45)}
 
-            h1 {
-                font-size: 2rem;
-            }
+  /* ---------- footer ---------- */
+  footer{
+    margin-top:80px;padding-top:32px;
+    border-top:1px solid var(--line);
+    color:var(--muted);font-size:14px;
+  }
+  footer a{color:var(--gold)}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
 
-            .subtitle {
-                font-size: 1rem;
-            }
-
-            .bio {
-                font-size: 1rem;
-            }
-        }
-    </style>
+  @media (max-width:720px){
+    .grid{grid-template-columns:1fr}
+    .wrap{padding:0 18px 72px}
+    .sec-head{flex-wrap:wrap;gap:10px}
+    .sec-head .rule{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-image">
-            <img src="IMG_1475.jpeg" alt="Eli Lipstein">
-        </div>
-        
-        <h1>Eli Lipstein</h1>
-        <div class="subtitle">Technical Program Manager</div>
-        
-        <p class="bio">
-            I'm a Senior Technical Program Manager at Microsoft working on Copilot. 
-            Based in the Pacific Northwest, I'm passionate about driving impactful technology 
-            initiatives and building great products. When I'm not managing programs, you'll 
-            find me baking bread and exploring the beautiful PNW.
-        </p>
-        
-        <a href="https://linkedin.com/in/elipstein" class="linkedin-button" target="_blank" rel="noopener noreferrer">
-            Connect on LinkedIn
-        </a>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Est. 1958 · Taipei</p>
+    <h1>דין טאי פונג</h1>
+    <p class="latin-title">Din Tai Fung</p>
+    <p class="lede">התפריט המלא בעברית. מתחת לכל שם מופיע השם באנגלית בדיוק כפי שהוא מופיע בתפריט המקורי — אפשר להצביע עליו כדי להזמין.</p>
+    <div class="pleats" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
     </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#appetizers">מנות פתיחה</a>
+    <a href="#xlb">שיאו לונג באו</a>
+    <a href="#dumplings">כיסונים ולחמניות</a>
+    <a href="#wontons">וונטונים</a>
+    <a href="#greens">ירקות</a>
+    <a href="#specialties">מנות הבית</a>
+    <a href="#noodles">אטריות</a>
+    <a href="#soups">מרקי אטריות</a>
+    <a href="#wok">מהווק</a>
+    <a href="#alacarte">א-לה-קארט</a>
+    <a href="#cocktails">קוקטיילים</a>
+    <a href="#desserts">קינוחים</a>
+    <a href="#drinks">משקאות</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ===================== APPETIZERS ===================== -->
+<section id="appetizers">
+  <div class="sec-head">
+    <h2>מנות פתיחה</h2><span class="en">Appetizers</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/cucumber-salad">סלט מלפפונים</a></h3>
+      <p class="order">Cucumber Salad</p>
+      <p class="desc">מלפפונים פרסיים פריכים עם פלפל פרסנו מתון ופרוסות שום טרי, בשמן שומשום ובשמן הצ'ילי של הבית.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span><span class="tag hot">חריפות עדינה</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/seaweed-and-beancurd-salad">סלט אצות וטופו</a></h3>
+      <p class="order">Seaweed &amp; Beancurd Salad</p>
+      <p class="desc">נבטי שעועית, אטריות זכוכית, רצועות טופו קפיציות ואצות דקות ברוטב חומץ מסורתי, עם נגיעה של שמן צ'ילי.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/soy-noodle-salad">סלט אטריות טופו</a></h3>
+      <p class="order">Soy Noodle Salad</p>
+      <p class="desc">יריעות טופו פרוסות דק כך שהן נראות כמו אטריות, עם גזר וסלרי בחיתוך גפרור לפריכות.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/wood-ear-mushrooms">פטריות אוזן־עץ ברוטב חומץ</a></h3>
+      <p class="order">Wood Ear Mushrooms in a Vinegar Dressing</p>
+      <p class="desc">פטריות אוזן־עץ שנספגו ברוטב חומץ עד שהן רכות ועסיסיות, עם פירות גוג'י וג'ינג'ר מגורד דק. שמן שומשום ומעט לימון.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/sweet-and-sour-pork-baby-back-ribs">צלעות חזיר ברוטב חמוץ־מתוק</a></h3>
+      <p class="order">Sweet &amp; Sour Pork Baby Back Ribs</p>
+      <p class="desc">מנת פתיחה שנגהאית קלאסית. צלעות רכות בציפוי אחיד של רוטב חמוץ־מתוק מתוצרת הבית.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/hot-and-sour-soup-pork">מרק חמוץ־חריף (חזיר)</a></h3>
+      <p class="order">Hot &amp; Sour Soup (Pork)</p>
+      <p class="desc">מרק סמיך ועשיר עם נבטי במבוק, ביצה משיית, פטריות אוזן־עץ פריכות וטופו רך. מעל — בצל ירוק ותיבול הבית.</p>
+      <div class="tags"><span class="tag pork">חזיר</span><span class="tag hot">חריף</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/steamed-soup-with-bone-in-chicken">מרק עוף מאודה על העצם</a></h3>
+      <p class="order">Steamed Soup with Bone-in Chicken</p>
+      <p class="desc">נתחי עוף נבחרים שאודו שעות עם ג'ינג'ר טרי ובצל ירוק. מרק צלול וקליל, אבל עם ארומה עמוקה.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/steamed-soup-with-bone-in-beef-short-ribs">מרק אסאדו מאודה על העצם</a></h3>
+      <p class="order">Steamed Soup with Bone-in Beef Short Ribs</p>
+      <p class="desc">ציר בקר מאודה, עדין וטעים, עם פרוסות אסאדו רכות.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== XIAO LONG BAO ===================== -->
+<section id="xlb">
+  <div class="sec-head">
+    <h2>שיאו לונג באו</h2><span class="en">Xiao Long Bao</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/kurobuta-pork-xiao-long-bao">שיאו לונג באו חזיר קורובוטה</a></h3>
+      <p class="order">Kurobuta Pork Xiao Long Bao</p>
+      <p class="desc">כיסוני המרק שבנו את שמו של המקום. כל אחד נשקל ומקופל ביד ל־18 קפלים בדיוק, במילוי חזיר קורובוטה משובח, ג'ינג'ר טרי ובצל ירוק.</p>
+      <div class="tags"><span class="tag star">מנת הדגל</span><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/crab-and-kurobuta-pork-xiao-long-bao">שיאו לונג באו סרטן וחזיר קורובוטה</a></h3>
+      <p class="order">Crab &amp; Kurobuta Pork Xiao Long Bao</p>
+      <p class="desc">וריאציה על הקלאסיקה: חזיר קורובוטה עסיסי עם בשר סרטן. המתיקות הטבעית של הסרטן מרככת את טעם הבשר.</p>
+      <div class="tags"><span class="tag pork">חזיר</span><span class="tag sea">פירות ים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/chicken-xiao-long-bao">שיאו לונג באו עוף</a></h3>
+      <p class="order">Chicken Xiao Long Bao</p>
+      <p class="desc">גרסה מחודשת לקלאסיקה: עוף טרי שנטחן במקום מדי יום, נגיעות מתוקות של גזר וסלרי, ג'ינג'ר ובצל ירוק.</p>
+      <div class="tags"><span class="tag star">פופולרי</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== DUMPLINGS & BUNS ===================== -->
+<section id="dumplings">
+  <div class="sec-head">
+    <h2>כיסונים ולחמניות מאודות</h2><span class="en">Dumplings &amp; Buns</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/chicken-dumplings">כיסוני עוף</a></h3>
+      <p class="order">Chicken Dumplings</p>
+      <p class="desc">כיסונים מקופלים ביד במילוי עוף משובח ובצל מתוק.</p>
+      <div class="tags"><span class="tag star">פופולרי</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegan-dumplings">כיסונים טבעוניים</a></h3>
+      <p class="order">Vegan Dumplings</p>
+      <p class="desc">מילוי מאוזן של טופו, בוק צ'וי, פטריות שיטאקה ואוזן־עץ, אטריות זכוכית וחיקמה. מיץ תרד סחוט מגולגל לתוך הבצק ונותן את הצבע הירוק.</p>
+      <div class="tags"><span class="tag veg">טבעוני</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/cod-dumplings">כיסוני בקלה</a></h3>
+      <p class="order">Cod Dumplings</p>
+      <p class="desc">יחס מדויק בין בקלה מאלסקה לבקלה מהאטלנטי, לטעם עדין ונקי. כרוב טייוואני, סלרי וערמוני מים מוסיפים קפיציות ופריכות.</p>
+      <div class="tags"><span class="tag sea">דגים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shrimp-and-kurobuta-pork-dumplings">כיסוני שרימפס וחזיר קורובוטה</a></h3>
+      <p class="order">Shrimp &amp; Kurobuta Pork Dumplings</p>
+      <p class="desc">שרימפס שנוקה טרי לצד חזיר קורובוטה איכותי — שילוב של טעם ומרקם שקשה להתחרות בו.</p>
+      <div class="tags"><span class="tag pork">חזיר</span><span class="tag sea">פירות ים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/kimchi-and-kurobuta-pork-dumplings">כיסוני קימצ'י וחזיר קורובוטה</a></h3>
+      <p class="order">Kimchi &amp; Kurobuta Pork Dumplings</p>
+      <p class="desc">קימצ'י קוריאני אותנטי, עירית ואטריות זכוכית קצוצים דק לתוך מילוי החזיר. מיץ הקימצ'י מגולגל לבצק ונותן לו את הגוון הכתום.</p>
+      <div class="tags"><span class="tag pork">חזיר</span><span class="tag hot">חריף</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shrimp-and-kurobuta-pork-shao-mai">שאו מאי שרימפס וחזיר קורובוטה</a></h3>
+      <p class="order">Shrimp &amp; Kurobuta Pork Shao Mai</p>
+      <p class="desc">מנה שנגהאית קלאסית. הבצק כאן עבה יותר משאר הכיסונים ולכן לעיס ונעים, המילוי חזיר קורובוטה, ומעל — שרימפס שלם ועסיסי.</p>
+      <div class="tags"><span class="tag pork">חזיר</span><span class="tag sea">פירות ים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/sticky-rice-shao-mai-with-kurobuta-pork-and-mushroom">שאו מאי אורז דביק עם חזיר ופטריות</a></h3>
+      <p class="order">Sticky Rice Shao Mai with Kurobuta Pork &amp; Mushroom</p>
+      <p class="desc">אורז דביק מתובל ברוטב סויה, עם פיסות שיטאקה אדמתיות וחזיר קורובוטה עשיר.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/kurobuta-pork-buns">לחמניות מאודות במילוי חזיר קורובוטה</a></h3>
+      <p class="order">Kurobuta Pork Buns</p>
+      <p class="desc">מילוי החזיר של הבית עטוף בלחמנייה רכה ואוורירית.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/chicken-and-mushroom-buns">לחמניות מאודות עוף ופטריות</a></h3>
+      <p class="order">Chicken &amp; Mushroom Buns</p>
+      <p class="desc">עוף מתובל בקפידה עם גזר, סלרי ופטריות צדף — הכל עטוף בלחמנייה האווירית.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegan-buns">לחמניות מאודות טבעוניות</a></h3>
+      <p class="order">Vegan Buns</p>
+      <p class="desc">גרסה טבעונית ללחמנייה הקלאסית, במילוי טופו, בוק צ'וי, שיטאקה, אוזן־עץ, אטריות זכוכית וחיקמה.</p>
+      <div class="tags"><span class="tag veg">טבעוני</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== WONTONS ===================== -->
+<section id="wontons">
+  <div class="sec-head">
+    <h2>וונטונים</h2><span class="en">Wontons</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shrimp-and-kurobuta-pork-spicy-wontons">וונטונים חריפים — שרימפס וחזיר קורובוטה</a></h3>
+      <p class="order">Shrimp &amp; Kurobuta Pork Spicy Wontons</p>
+      <p class="desc">וונטונים בעבודת יד ברוטב החריף של הבית, עם שום ובצל ירוק מעל.</p>
+      <div class="tags"><span class="tag pork">חזיר</span><span class="tag sea">פירות ים</span><span class="tag hot">חריף</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/chicken-spicy-wontons">וונטונים חריפים — עוף</a></h3>
+      <p class="order">Chicken Spicy Wontons</p>
+      <p class="desc">אותו רוטב חריף אהוב, עם שום ובצל ירוק, במילוי עוף.</p>
+      <div class="tags"><span class="tag hot">חריף</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegetable-and-kurobuta-pork-spicy-wontons">וונטונים חריפים — ירקות וחזיר קורובוטה</a></h3>
+      <p class="order">Vegetable &amp; Kurobuta Pork Spicy Wontons</p>
+      <p class="desc">וונטונים בעבודת יד ברוטב החריף של הבית, עם שום ובצל ירוק.</p>
+      <div class="tags"><span class="tag pork">חזיר</span><span class="tag hot">חריף</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegan-spicy-wontons">וונטונים חריפים טבעוניים</a></h3>
+      <p class="order">Vegan Spicy Wontons</p>
+      <p class="desc">מילוי של טופו, בוק צ'וי, שיטאקה, אוזן־עץ, אטריות זכוכית וחיקמה. מיץ תרד סחוט בבצק נותן את הגוון הירוק. מוגשים ברוטב החריף של הבית.</p>
+      <div class="tags"><span class="tag veg">טבעוני</span><span class="tag hot">חריף</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shrimp-and-kurobuta-pork-wonton-soup">מרק וונטון — שרימפס וחזיר קורובוטה</a></h3>
+      <p class="order">Shrimp &amp; Kurobuta Pork Wonton Soup</p>
+      <p class="desc">וונטונים בעבודת יד בציר עוף צלול ועדין, עם בצל ירוק וקורט שמן שומשום.</p>
+      <div class="tags"><span class="tag pork">חזיר</span><span class="tag sea">פירות ים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/chicken-wonton-soup">מרק וונטון — עוף</a></h3>
+      <p class="order">Chicken Wonton Soup</p>
+      <p class="desc">וונטונים במילוי עוף וסלרי קצוץ דק, בציר עוף צלול, עם בצל ירוק ושמן שומשום.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegetable-and-kurobuta-pork-wonton-soup">מרק וונטון — ירקות וחזיר קורובוטה</a></h3>
+      <p class="order">Vegetable &amp; Kurobuta Pork Wonton Soup</p>
+      <p class="desc">וונטונים במילוי חזיר קורובוטה ובוק צ'וי קצוץ, בציר עוף צלול.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegan-wonton-soup">מרק וונטון טבעוני</a></h3>
+      <p class="order">Vegan Wonton Soup</p>
+      <p class="desc">וונטונים במילוי טופו וירקות, מוגשים בציר קומבו קליל, עם בצל ירוק ושמן שומשום.</p>
+      <div class="tags"><span class="tag veg">טבעוני</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== GREENS ===================== -->
+<section id="greens">
+  <div class="sec-head">
+    <h2>ירקות ירוקים</h2><span class="en">Greens</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/string-beans-with-garlic">שעועית ירוקה בשום</a></h3>
+      <p class="order">String Beans with Garlic</p>
+      <p class="desc">שעועית ירוקה חתוכה טרי, מצופה בשום כתוש ומוקפצת באש גבוהה.</p>
+      <div class="tags"><span class="tag star">פופולרי</span><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/broccoli-with-garlic">ברוקולי בשום</a></h3>
+      <p class="order">Broccoli with Garlic</p>
+      <p class="desc">מוקפץ באש גבוהה עם פרוסות שום טרי — פשוט, פריך ומספק.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/bok-choy-with-scallion-infused-oil">בוק צ'וי בשמן בצל ירוק</a></h3>
+      <p class="order">Bok Choy with Scallion-Infused Oil</p>
+      <p class="desc">בוק צ'וי נבחר, מוקפץ קלות באש גבוהה עם שמן בצל ירוק. התזמון מדויק כך שהעלים מתבשלים אך נשארים פריכים.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/spinach-with-garlic">תרד בשום</a></h3>
+      <p class="order">Spinach with Garlic</p>
+      <p class="desc">תרד טרי מוקפץ עם שום כתוש ושמן שום מתוצרת הבית.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/taiwanese-cabbage-with-garlic">כרוב טייוואני בשום</a></h3>
+      <p class="order">Taiwanese Cabbage with Garlic</p>
+      <p class="desc">כרוב טייוואני פריך ומתוק, מוקפץ באש גבוהה עם פרוסות שום טרי.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/kale-with-garlic">קייל בשום</a></h3>
+      <p class="order">Kale with Garlic</p>
+      <p class="desc">קייל מתולתל טרי, מוקפץ עם שום פרוס דק ושמן שום של הבית.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== SPECIALTIES ===================== -->
+<section id="specialties">
+  <div class="sec-head">
+    <h2>מנות הבית</h2><span class="en">Specialties</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shrimp-and-kurobuta-pork-pot-stickers">פוט־סטיקרס שרימפס וחזיר קורובוטה</a></h3>
+      <p class="order">Shrimp &amp; Kurobuta Pork Potstickers</p>
+      <p class="desc">כיסונים מטוגנים במחבת, פריכים מלמטה, במילוי חזיר קורובוטה ושרימפס טרי. מוגשים עם רוטב מתקתק של הבית.</p>
+      <div class="tags"><span class="tag pork">חזיר</span><span class="tag sea">פירות ים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/truffle-and-kurobuta-pork-xiao-long-bao">שיאו לונג באו כמהין וחזיר קורובוטה</a></h3>
+      <p class="order">Truffle &amp; Kurobuta Pork Xiao Long Bao</p>
+      <p class="desc">השיאו לונג באו הקלאסי, עם פרוסות שלמות של כמהין מיובאת מאיטליה.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/black-pepper-beef-tenderloin">פילה בקר בפלפל שחור</a></h3>
+      <p class="order">Black Pepper Beef Tenderloin</p>
+      <p class="desc">פילה אנגוס משובח, פטריות שימג'י, פלפלים צבעוניים ובצל — נצרבים יחד בווק לוהט ומוקפצים ברוטב פלפל שחור של הבית.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== NOODLES ===================== -->
+<section id="noodles">
+  <div class="sec-head">
+    <h2>אטריות</h2><span class="en">Noodles</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/noodles-with-sesame-sauce">אטריות ברוטב שומשום</a></h3>
+      <p class="order">Noodles with Sesame Sauce</p>
+      <p class="desc">אטריות ביצים דקות מתוצרת הבית בציפוי רוטב שומשום, עם שמן הצ'ילי של הבית ובוטנים קלויים כתושים.</p>
+      <div class="tags"><span class="tag">מכיל בוטנים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegan-noodles-with-sesame-sauce">אטריות טבעוניות ברוטב שומשום</a></h3>
+      <p class="order">Vegan Noodles with Sesame Sauce</p>
+      <p class="desc">אטריות על בסיס ‎JUST Egg™‎, תחליף ביצה צמחי מחלבון שעועית מונג. מיץ תרד בבצק נותן את הגוון הירוק. ברוטב שומשום, עם שמן צ'ילי ובוטנים קלויים.</p>
+      <div class="tags"><span class="tag veg">טבעוני</span><span class="tag">מכיל בוטנים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/noodles-with-spicy-sauce">אטריות ברוטב חריף</a></h3>
+      <p class="order">Noodles with Spicy Sauce</p>
+      <p class="desc">אטריות ביצים דקות מתוצרת הבית בציפוי הרוטב החריף של הבית.</p>
+      <div class="tags"><span class="tag hot">חריף</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegan-noodles-with-spicy-sauce">אטריות טבעוניות ברוטב חריף</a></h3>
+      <p class="order">Vegan Noodles with Spicy Sauce</p>
+      <p class="desc">אטריות ‎JUST Egg™‎ בגוון ירוק ממיץ תרד, בציפוי הרוטב החריף של הבית.</p>
+      <div class="tags"><span class="tag veg">טבעוני</span><span class="tag hot">חריף</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/noodles-with-minced-kurobuta-pork">אטריות עם חזיר קורובוטה טחון</a></h3>
+      <p class="order">Noodles with Minced Kurobuta Pork</p>
+      <p class="desc">אטריות ביצים דקות בתוספת חזיר קורובוטה טחון שהוקפץ עם קוביות עגבנייה, טופו, בצל ירוק, אדממה ומלפפון פרוס.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/noodles-with-diced-beef-and-szechuan-peppers">אטריות עם קוביות בקר ופלפל סצ'ואן</a></h3>
+      <p class="order">Noodles with Diced Beef &amp; Szechuan Peppers</p>
+      <p class="desc">אטריות ביצים דקות עם קוביות צלי אנגוס, עגבנייה, טופו, אדממה, מלפפון, כוסברה טרייה ופלפל סצ'ואן — חריף ועשבוני.</p>
+      <div class="tags"><span class="tag hot">חריף</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== NOODLE SOUPS ===================== -->
+<section id="soups">
+  <div class="sec-head">
+    <h2>מרקי אטריות</h2><span class="en">Noodle Soups</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/braised-beef-noodle-soup">מרק אטריות עם בקר מבושל</a></h3>
+      <p class="order">Braised Beef Noodle Soup</p>
+      <p class="desc">אטריות ביצים של הבית בציר שמתבשל שעות עד לטעם ארומטי וחריף קלות. מעל — בוק צ'וי חלוט.</p>
+      <p class="note">הבקר מכיל גידים.</p>
+      <div class="tags"><span class="tag hot">חריפות עדינה</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/sliced-chicken-noodle-soup-boneless">מרק אטריות עם פרוסות עוף</a></h3>
+      <p class="order">Sliced Chicken Noodle Soup (Boneless)</p>
+      <p class="desc">אטריות ביצים בציר עוף עדין עם פרוסות חזה עוף רכות, בוק צ'וי, גזר ונבטי במבוק.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/fried-pork-chop-noodle-soup">מרק אטריות עם צלע חזיר מטוגנת</a></h3>
+      <p class="order">Fried Pork Chop Noodle Soup</p>
+      <p class="desc">אטריות ביצים בציר צלול וקליל, ומעל פרוסות מצלע החזיר המטוגנת בסגנון שנגהאי.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/tofu-puff-and-glass-noodle-soup">מרק אטריות זכוכית וטופו מנופח</a></h3>
+      <p class="order">Tofu Puff &amp; Glass Noodle Soup</p>
+      <p class="desc">אטריות זכוכית לעיסות בציר צלול, עם רולים של חזיר קורובוטה, קוביות טופו מנופח ובצל ירוק.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== FROM THE WOK ===================== -->
+<section id="wok">
+  <div class="sec-head">
+    <h2>מהווק</h2><span class="en">From the Wok</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/pork-chop-fried-rice">אורז מטוגן עם צלע חזיר</a></h3>
+      <p class="order">Fried Rice with Pork Chop</p>
+      <p class="desc">אורז מטוגן מתובל היטב עם ביצה ובצל ירוק קצוץ טרי, ומעל שניצל חזיר בסגנון שנגהאי — פריך מבחוץ, רך ועסיסי בפנים.</p>
+      <div class="tags"><span class="tag star">פופולרי</span><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/chicken-fried-rice">אורז מטוגן עם עוף</a></h3>
+      <p class="order">Fried Rice with Chicken</p>
+      <p class="desc">עוף רך, ביצה מקושקשת עדינה, בצל ירוק קצוץ ואורז טייוואני משובח — הכל מוקפץ יחד באש גבוהה.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shrimp-fried-rice">אורז מטוגן עם שרימפס</a></h3>
+      <p class="order">Fried Rice with Shrimp</p>
+      <p class="desc">שרימפס עסיסי, ביצה מקושקשת עדינה, בצל ירוק ואורז טייוואני משובח, מוקפצים באש גבוהה.</p>
+      <div class="tags"><span class="tag sea">פירות ים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shredded-kurobuta-pork-fried-rice">אורז מטוגן עם רצועות חזיר קורובוטה</a></h3>
+      <p class="order">Fried Rice with Shredded Kurobuta Pork</p>
+      <p class="desc">רצועות חזיר קורובוטה במרינדה, ביצה מקושקשת, בצל ירוק ואורז טייוואני. טעמים עדינים שמשתלבים היטב עם כל שאר המנות.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegetable-and-mushroom-fried-rice">אורז מטוגן עם ירקות ופטריות</a></h3>
+      <p class="order">Fried Rice with Vegetable &amp; Mushroom</p>
+      <p class="desc">גרסה קלילה לאורז המטוגן, עם כרוב טייוואני, פטריות שימג'י ותירס. ההקפצה באש גבוהה מוציאה את הטעמים.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/fried-noodles-with-skirt-steak">אטריות מוקפצות עם סטייק סקירט</a></h3>
+      <p class="order">Fried Noodles with Skirt Steak</p>
+      <p class="desc">אטריות מוקפצות בווק על להבה פתוחה עם ירקות טריים ורצועות סטייק סקירט משובח. מוגש עם כרוב נאפה פריך, עלי תרד ושמן בצל ירוק.</p>
+      <div class="tags"><span class="tag star">חדש בתפריט</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/chicken-fried-noodles">אטריות מוקפצות עם עוף</a></h3>
+      <p class="order">Fried Noodles with Chicken</p>
+      <p class="desc">אטריות מוקפצות בווק עם ירקות טריים ורצועות עוף רכות, כרוב נאפה, תרד ושמן בצל ירוק.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shrimp-fried-noodles">אטריות מוקפצות עם שרימפס</a></h3>
+      <p class="order">Fried Noodles with Shrimp</p>
+      <p class="desc">אטריות מוקפצות בווק עם ירקות טריים ושרימפס עסיסי, כרוב נאפה, תרד ושמן בצל ירוק.</p>
+      <div class="tags"><span class="tag sea">פירות ים</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shredded-kurobuta-pork-fried-noodles">אטריות מוקפצות עם רצועות חזיר קורובוטה</a></h3>
+      <p class="order">Fried Noodles with Shredded Kurobuta Pork</p>
+      <p class="desc">אטריות מוקפצות בווק עם ירקות טריים ורצועות חזיר קורובוטה, כרוב נאפה, תרד ושמן בצל ירוק.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/vegetable-fried-noodles">אטריות מוקפצות עם ירקות</a></h3>
+      <p class="order">Fried Noodles with Vegetable</p>
+      <p class="desc">אטריות מתוצרת הבית מוקפצות בווק על להבה פתוחה, עם כרוב נאפה פריך, עלי תרד ושמן בצל ירוק.</p>
+      <div class="tags"><span class="tag veg">ללא בשר</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== A LA CARTE ===================== -->
+<section id="alacarte">
+  <div class="sec-head">
+    <h2>א-לה-קארט</h2><span class="en">A La Carte</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/fried-pork-chop">צלע חזיר מטוגנת</a></h3>
+      <p class="order">Fried Pork Chop</p>
+      <p class="desc">כל צלע מטוגנת בדיוק ומתובלת בפלפל גרוס טרי. זהובה מבחוץ, עסיסית מבפנים.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/kurobuta-pork-sticky-rice-wrap">אורז דביק בעלה במבוק עם חזיר קורובוטה</a></h3>
+      <p class="order">Kurobuta Pork Sticky Rice Wrap</p>
+      <p class="desc">אורז דביק במילוי בטן חזיר קורובוטה מבושלת, עטוף בעלי במבוק. מנה מסורתית שקשה לוותר עליה.</p>
+      <div class="tags"><span class="tag pork">חזיר</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== COCKTAILS ===================== -->
+<section id="cocktails">
+  <div class="sec-head">
+    <h2>קוקטיילים</h2><span class="en">Signature Cocktails</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/pear-lychee-martini">מרטיני אגס וליצ'י</a></h3>
+      <p class="order">Pear Lychee Martini</p>
+      <p class="desc">‎2oz‎ וודקה גריי גוס לה פואר, סן־ז'רמן, מיץ לימון סחוט ופרי ליצ'י.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/lychee-mojito">מוחיטו ליצ'י</a></h3>
+      <p class="order">Lychee Mojito</p>
+      <p class="desc">‎2.5oz‎ רום בקרדי לייט, ליקר ליצ'י, מיץ ליים סחוט ונענע.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/yuzu-margarita">מרגריטה יוזו</a></h3>
+      <p class="order">Yuzu Margarita</p>
+      <p class="desc">‎1.75oz‎ טקילה פטרון סילבר, מיץ יוזו וגראנד מרנייה.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/cucumber-gimlet">גימלט מלפפון</a></h3>
+      <p class="order">Cucumber Gimlet</p>
+      <p class="desc">‎2.25oz‎ ג'ין רוקו, סן־ז'רמן, מיץ ליים סחוט, מלפפון טרי ונענע.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/dtf-old-fashioned">אולד פאשנד DTF</a></h3>
+      <p class="order">DTF Old Fashioned</p>
+      <p class="desc">‎2oz‎ וויסקי סינגל מאלט טייוואני קוואלן, סירופ תה אולונג של הבית, ביטר תפוז ודובדבן לוקסרדו.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== DESSERTS ===================== -->
+<section id="desserts">
+  <div class="sec-head">
+    <h2>קינוחים</h2><span class="en">Desserts</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/shaved-snow-with-fresh-mango">קרח מגורד עם מנגו טרי</a></h3>
+      <p class="order">Shaved Snow with Fresh Mango</p>
+      <p class="desc">קרח מגורד רך ואוורירי על בסיס חלב מלא, עם מנגו טרי, רוטב מנגו מתוק־חמצמץ וחלב מרוכז.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/chocolate-and-mochi-xiao-long-bao">שיאו לונג באו שוקולד ומוצ'י</a></h3>
+      <p class="order">Chocolate &amp; Mochi Xiao Long Bao</p>
+      <p class="desc">טראפל שוקולד עשיר עטוף בשכבה דקה של מוצ'י, מקופל ב־18 קפלים כמו המקור. לבה של שוקולד בכל ביס.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/red-bean-and-mochi-xiao-long-bao">שיאו לונג באו שעועית אדומה ומוצ'י</a></h3>
+      <p class="order">Red Bean &amp; Mochi Xiao Long Bao</p>
+      <p class="desc">ממרח שעועית אדומה חלק וקטיפתי בתוך בצק השיאו לונג באו, עם שכבת מוצ'י שמוסיפה לעיסות.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/sweet-taro-xiao-long-bao">שיאו לונג באו טארו</a></h3>
+      <p class="order">Sweet Taro Xiao Long Bao</p>
+      <p class="desc">מילוי טארו משיי ועדין בתוך בצק השיאו לונג באו — לאוהבי קינוחים מעודנים ולא מתוקים מדי.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/sesame-and-mochi-xiao-long-bao">שיאו לונג באו שומשום שחור ומוצ'י</a></h3>
+      <p class="order">Sesame &amp; Mochi Xiao Long Bao</p>
+      <p class="desc">ממרח שומשום שחור עטוף במוצ'י ובבצק מקופל ביד. קשה לוותר עליו אם אוהבים מתוק.</p>
+      <p class="note">בסניף לאס וגאס מוגש ‎6‎ יחידות. עלול להכיל בוטנים.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/chocolate-buns">לחמניות שוקולד</a></h3>
+      <p class="order">Chocolate Buns</p>
+      <p class="desc">טראפל שוקולד עשיר עטוף בלחמנייה רכה ואוורירית. לבה של שוקולד בכל ביס.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/red-bean-buns">לחמניות שעועית אדומה</a></h3>
+      <p class="order">Red Bean Buns</p>
+      <p class="desc">לחמנייה רכה ואוורירית במילוי ממרח שעועית אדומה מתוק וחלק — אחת האהובות על באי המקום.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/sweet-taro-buns">לחמניות טארו</a></h3>
+      <p class="order">Sweet Taro Buns</p>
+      <p class="desc">מילוי טארו משיי בתוך הלחמנייה הרכה של הבית.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/sesame-buns">לחמניות שומשום</a></h3>
+      <p class="order">Sesame Buns</p>
+      <p class="desc">ממרח שומשום עשיר בתוך לחמנייה מאודה בטעם שומשום שחור. טעם אגוזי ועמוק עם נגיעות קלויות ומרקם אוורירי.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/red-bean-sticky-rice-wrap">אורז דביק בעלה במבוק עם שעועית אדומה</a></h3>
+      <p class="order">Red Bean Sticky Rice Wrap</p>
+      <p class="desc">ממרח שעועית אדומה מתוק בעדינות, עטוף באורז דביק ובעלי במבוק ששומרים על הלחות ועל הארומה.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== BEVERAGES ===================== -->
+<section id="drinks">
+  <div class="sec-head">
+    <h2>משקאות</h2><span class="en">Beverages</span><span class="rule"></span>
+  </div>
+  <div class="grid">
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/milk-teas">תה חלב</a></h3>
+      <p class="order">Milk Teas</p>
+      <p class="desc">תה שחור אסאם משובח מטייוואן, נחלט במקום ומנוער ביד כדי לאוורר אותו. אפשר גם עם תה ירוק יסמין לגרסה קלילה ופרחונית יותר.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/matcha-jasmine-latte">לאטה מאצ'ה ויסמין</a></h3>
+      <p class="order">Matcha Jasmine Latte</p>
+      <p class="desc">מאצ'ה טקסית בשכבות עם תה חלב יסמין טייוואני — איזון בין מתיקות פרחונית לאדמתיות בהירה.</p>
+      <div class="tags"><span class="tag star">חדש</span></div>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/iced-black-teas">תה שחור קר</a></h3>
+      <p class="order">Iced Black Teas</p>
+      <p class="desc">תה אסאם מלא גוף, נחלט טרי ומנוער להזמנה, עם נגיעות קקאו ורמז של תבלין. אפשר לשתות כמו שהוא או עם טעם פרי.</p>
+      <p class="note">תה שחור עם דבש אינו טבעוני.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/iced-green-teas">תה ירוק קר</a></h3>
+      <p class="order">Iced Green Teas</p>
+      <p class="desc">תה ירוק יסמין נחלט טרי ומנוער להזמנה, עם נימה פרחונית עדינה. כמו שהוא או עם טעם פרי.</p>
+      <p class="note">תה ירוק עם דבש אינו טבעוני.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/sea-salt-cream-iced-teas">תה קר עם קצפת מלח ים</a></h3>
+      <p class="order">Sea Salt Cream Iced Teas</p>
+      <p class="desc">קצפת מוקצפת ביד מעל תה של הבית ממותק קלות. תה ירוק לטעם פרחוני, או תה שחור לסיומת עשירה ושוקולדית.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/fresh-orange-green-iced-tea">תה ירוק קר עם תפוז סחוט</a></h3>
+      <p class="order">Fresh Orange Green Iced Tea</p>
+      <p class="desc">תה יסמין טייוואני שנחלט טרי מדי יום, עם מיץ תפוזים סחוט ביד שמשלים את הנימה הפרחונית.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/fresh-lemon-iced-teas">תה קר עם לימון סחוט</a></h3>
+      <p class="order">Fresh Lemon Iced Teas</p>
+      <p class="desc">פרץ לימוני עם סיומת מתוקה ורכה, ממיץ לימון סחוט טרי. לבחירה: תה ירוק יסמין או תה שחור אסאם.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/honey-lemonade">לימונדה עם דבש</a></h3>
+      <p class="order">Honey Lemonade</p>
+      <p class="desc">מוכנה להזמנה ומנוערת עם קרח כתוש, מיץ לימון סחוט וקורט דבש. מתוקה, חמצמצה ומרעננת.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/taiwanese-hot-teas">תה טייוואני חם</a></h3>
+      <p class="order">Taiwanese Hot Teas</p>
+      <p class="desc">כוס תה חם מגידולי טייוואן. לבחירה: יסמין או אולונג.</p>
+    </article>
+
+    <article class="dish">
+      <h3><a href="https://dtf.com/en-us/menu/fresh-squeezed-orange-juice">מיץ תפוזים סחוט</a></h3>
+      <p class="order">Fresh Squeezed Orange Juice</p>
+      <p class="desc">מתפוזי טבור המפורסמים במתיקותם, נסחט במקום מדי יום.</p>
+    </article>
+
+  </div>
+</section>
+
+<footer>
+  <div class="legend">
+    <span class="tag pork">חזיר</span>
+    <span class="tag sea">פירות ים / דגים</span>
+    <span class="tag veg">טבעוני / ללא בשר</span>
+    <span class="tag hot">חריף</span>
+    <span class="tag star">מומלץ / חדש</span>
+  </div>
+  <p>המטבח משתמש בציוד, במשטחים ובשמני בישול משותפים. אי אפשר להתחייב שמנה כלשהי נקייה מאלרגנים, מגלוטן או ממרכיבים מן החי.</p>
+  <p style="margin-top:14px">לפירוט אלרגנים מלא: <a href="https://dtf-cdn.com/files/production/93487c15c4d0af9cd4cefe67a5d503acf5d203ec.pdf">מדריך האלרגנים הרשמי</a> · לתפריט המקורי: <a href="https://dtf.com/en-us/menu">dtf.com</a></p>
+  <p style="margin-top:14px;font-size:13px">תרגום לא רשמי לנוחות הקריאה. התפריט, המנות והזמינות עשויים להשתנות — התפריט הקובע הוא זה שבסניף.</p>
+</footer>
+
+</div>
 </body>
 </html>
