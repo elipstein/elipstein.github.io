@@ -1,0 +1,81 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Seattle Events Monitor//seattle-events-monitor//
+X-WR-CALNAME:Seattle Events Monitor
+BEGIN:VEVENT
+SUMMARY:[In Your Backyard] Ann Patchett — in conversation
+DTSTART;TZID="UTC-07:00":20260709T190000
+DTEND;TZID="UTC-07:00":20260709T210000
+UID:sample:local-1
+DESCRIPTION:Category: authors
+LOCATION:Elliott Bay Book Company\, Seattle\, WA
+URL:https://www.elliottbaybook.com/events
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[In Your Backyard] Neil deGrasse Tyson: A Cosmic Perspective
+DTSTART;TZID="UTC-07:00":20260718T193000
+DTEND;TZID="UTC-07:00":20260718T213000
+UID:sample:local-2
+DESCRIPTION:Category: talks\nMatched watchlist: Neil deGrasse Tyson
+LOCATION:Town Hall Seattle\, Seattle\, WA
+URL:https://townhallseattle.org/events/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[In Your Backyard] Chef's Table Pop-Up Dinner
+DTSTART;TZID="UTC-07:00":20260802T180000
+DTEND;TZID="UTC-07:00":20260802T200000
+UID:sample:local-3
+DESCRIPTION:Category: chef_dinners
+LOCATION:Canlis\, Seattle\, WA
+URL:https://canlis.com/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[In Your Backyard] George Saunders reads from his new collection
+DTSTART;TZID="UTC-07:00":20260814T190000
+DTEND;TZID="UTC-07:00":20260814T210000
+UID:sample:local-4
+DESCRIPTION:Category: authors\nMatched watchlist: George Saunders
+LOCATION:Third Place Books - Ravenna\, Seattle\, WA
+URL:https://www.thirdplacebooks.com/events
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Worth the Flight] José Andrés: World Central Kitchen Benefit Di
+ nner
+DTSTART;TZID="UTC-07:00":20260724T183000
+DTEND;TZID="UTC-07:00":20260724T203000
+UID:sample:big-1
+DESCRIPTION:Category: watchlist\nMatched watchlist: José Andrés\n~2.0h f
+ light from SEA
+LOCATION:The Ferry Building\, San Francisco\, CA
+URL:https://example.com/jose-andres-sf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Worth the Flight] John Mulaney: Live
+DTSTART;TZID="UTC-07:00":20260805T200000
+DTEND;TZID="UTC-07:00":20260805T220000
+UID:sample:big-2
+DESCRIPTION:Category: watchlist\nMatched watchlist: John Mulaney\n~1.0h fl
+ ight from SEA
+LOCATION:Moda Center\, Portland\, OR
+URL:https://example.com/mulaney-portland
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Worth the Flight] Barack Obama: A Promised Land Tour
+DTSTART;TZID="UTC-07:00":20260910T190000
+DTEND;TZID="UTC-07:00":20260910T210000
+UID:sample:big-3
+DESCRIPTION:Category: big_venue\n~2.5h flight from SEA
+LOCATION:Crypto.com Arena\, Los Angeles\, CA
+URL:https://example.com/obama-la
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Worth the Flight] David Chang: Chef Talk & Tasting
+DTSTART;TZID="UTC-07:00":20260922T180000
+DTEND;TZID="UTC-07:00":20260922T200000
+UID:sample:big-4
+DESCRIPTION:Category: watchlist\nMatched watchlist: David Chang\n~1.0h fli
+ ght from SEA
+LOCATION:Rogers Arena\, Vancouver\, BC
+URL:https://example.com/chang-vancouver
+END:VEVENT
+END:VCALENDAR
